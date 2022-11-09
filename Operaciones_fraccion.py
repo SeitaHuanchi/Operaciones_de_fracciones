@@ -49,32 +49,32 @@ while True:
 	numerator=int(input("Indique el Valor del 1er numerador: "))
 	denominator=int(input("Indique el valor del 1er denominador: "))
 
-	a=Fraction(numerator,denominator)
-	print("Primera Fraccion: ",str(a),"\n")
+	fract_1=Fraction(numerator,denominator)
+	print("Primera Fraccion: ",str(fract_1),"\n")
 
 	numerator=int(input("Indique el Valodr del 2er numerador: "))
 	denominator=int(input("Indique el valor del 2er denominador: "))
 
-	b=Fraction(numerator,denominator)
-	print("Segunda Fraccion: ",str(b),"\n")
+	fract_2=Fraction(numerator,denominator)
+	print("Segunda Fraccion: ",str(fract_2),"\n")
 
 
 	operation=input("Indique la operacion con simbolos (+, -, *, /): ")
 
 	if operation == '+':
-		result= a.addition(b)
+		result= fract_1.addition(fract_2)
 		print("1era Fraccion + 2da Fraccion = ",str(result))
 
 	elif operation == '-':
-		result= a.rest(b)
+		result= fract_1.rest(fract_2)
 		print("1era Fraccion - 2da Fraccion = ",str(result))
 
 	elif operation == '*':
-		result= a.multiplication(b)
+		result= fract_1.multiplication(fract_2)
 		print("1era Fraccion * 2da Fraccion = ",str(result))
 
 	elif operation == '/':
-		result= a.division(b)
+		result= fract_1.division(fract_2)
 		print("1era Fraccion / 2da Fraccion = ",str(result))
 
 	else:
