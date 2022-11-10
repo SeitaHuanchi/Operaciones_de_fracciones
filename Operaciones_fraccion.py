@@ -22,27 +22,27 @@ class Fraction:
 		return str(self.numerator)+ "/" + str(self.denominator)
 		
 	
-	def addition (self,other):
-		numerator= self.numerator*other.denominator + self.denominator*other.numerator
-		denominator= self.denominator* other.denominator
+	def addition (self,otherfrac):
+		numerator= self.numerator*otherfrac.denominator + self.denominator*otherfrac.numerator
+		denominator= self.denominator* otherfrac.denominator
 		comun = mcd(numerator,denominator)
 		return Fraction(numerator//comun, denominator//comun)
 
-	def rest (self,other):
-		numerator= self.numerator*other.denominator - self.denominator*other.numerator
-		denominator= self.denominator* other.denominator
+	def rest (self,otherfrac):
+		numerator= self.numerator*otherfrac.denominator - self.denominator*otherfrac.numerator
+		denominator= self.denominator* otherfrac.denominator
 		comun = mcd(numerator,denominator)
 		return Fraction(numerator//comun, denominator//comun)
 	
 	    
-	def multiplication (self,other):
-		numerator= self.numerator * other.numerator
-		denominator= self.denominator * other.denominator
+	def multiplication (self,otherfrac):
+		numerator= self.numerator * otherfrac.numerator
+		denominator= self.denominator * otherfrac.denominator
 		return Fraction(numerator,denominator)
 
-	def division (self,other):
-		numerator=self.numerator*other.denominator
-		denominator=self.denominator*other.numerator
+	def division (self,otherfrac):
+		numerator=self.numerator*otherfrac.denominator
+		denominator=self.denominator*otherfrac.numerator
 		return Fraction(numerator,denominator)	
 		
 
