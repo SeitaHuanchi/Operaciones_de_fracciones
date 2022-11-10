@@ -1,3 +1,5 @@
+#operaciones_de_fracciones
+
 def mcd(m,n):
     while m%n != 0:
         mViejo = m
@@ -45,40 +47,37 @@ class Fraction:
 		denominator=self.denominator*other.numerator
 		return Fraction(numerator,denominator)	
 		
-while True:
-	numerator=int(input("Indique el Valor del 1er numerador: "))
-	denominator=int(input("Indique el valor del 1er denominador: "))
 
-	fract_1=Fraction(numerator,denominator)
-	print("Primera Fraccion: ",str(fract_1),"\n")
+numerator=int(input("Indique el Valor del 1er numerador: "))
+denominator=int(input("Indique el valor del 1er denominador: "))
 
-	numerator=int(input("Indique el Valodr del 2er numerador: "))
-	denominator=int(input("Indique el valor del 2er denominador: "))
+fract_1=Fraction(numerator,denominator)
+print("Primera Fraccion: ",str(fract_1),"\n")
 
-	fract_2=Fraction(numerator,denominator)
-	print("Segunda Fraccion: ",str(fract_2),"\n")
+numerator=int(input("Indique el Valodr del 2er numerador: "))
+denominator=int(input("Indique el valor del 2er denominador: "))
+
+fract_2=Fraction(numerator,denominator)
+print("Segunda Fraccion: ",str(fract_2),"\n")
 
 
-	operation=input("Indique la operacion con simbolos (+, -, *, /): ")
+operation=input("Indique la operacion con simbolos (+, -, *, /): ")
 
-	if operation == '+':
+if operation == '+':
 		result= fract_1.addition(fract_2)
 		print("1era Fraccion + 2da Fraccion = ",str(result))
 
-	elif operation == '-':
+elif operation == '-':
 		result= fract_1.rest(fract_2)
 		print("1era Fraccion - 2da Fraccion = ",str(result))
 
-	elif operation == '*':
-		result= fract_1.multiplication(fract_2)
-		print("1era Fraccion * 2da Fraccion = ",str(result))
+elif operation == '*':
+	result= fract_1.multiplication(fract_2)
+	print("1era Fraccion * 2da Fraccion = ",str(result))
 
-	elif operation == '/':
+elif operation == '/':
 		result= fract_1.division(fract_2)
 		print("1era Fraccion / 2da Fraccion = ",str(result))
 
-	else:
-		print("Indique una operacion valida")
-
-	if input("\nOtra operacion? s/n : \n") == 'n':
-		break
+else:
+	print("Indique una operacion valida")
