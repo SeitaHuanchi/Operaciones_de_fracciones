@@ -1,10 +1,10 @@
 def mcd(m,n):
     while m%n != 0:
-        mViejo = m
-        nViejo = n
+        m_old = m
+        n_old = n
 
-        m = nViejo
-        n = mViejo%nViejo
+        m = n_old
+        n = m_old%n_old
     return n
 	    
 class Fraction:
