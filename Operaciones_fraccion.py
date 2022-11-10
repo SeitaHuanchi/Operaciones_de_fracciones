@@ -1,5 +1,3 @@
-#operaciones_de_fracciones
-
 def mcd(m,n):
     while m%n != 0:
         mViejo = m
